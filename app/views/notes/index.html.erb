@@ -1,5 +1,6 @@
 <h1>Listing notes</h1>
-<table>
+
+<table class="table table-striped">
   <tr>
     <th>Title</th>
     <th></th>
@@ -11,9 +12,9 @@
 
   <tr>
     <td><%= note.title %></td>
-    <td><%= link_to 'Show', note %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Destroy', note, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= button_to 'Show', note %></td>
+    <td><%= button_to 'Edit', edit_note_path(note) %></td>
+    <td><%= button_to 'Destroy', note, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
