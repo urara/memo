@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Memo</title>
+  <title>Memotest</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,7 +11,10 @@
 <p class="alert"><%= alert %></p>
 
 <% if user_signed_in? %>
-  login user:<%= link_to current_user.email, edit_user_registration_path %>
+<ul class="nav pull-right">
+<li>login user:<%= link_to current_user.email,
+edit_user_registration_path %></li>
+</ul>
 <% end %>
 
 <%= yield %>
